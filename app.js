@@ -28,11 +28,13 @@ const mongo = async () => {
     } catch (error) {
         console.log(error.message)
     }
-}
+};
+
+const PORT = process.env.PORT || 5000;
 
 //in order to use backend language, need to have a local server
-app.listen(5000, () => {
+app.listen(PORT, () => {
     mongo()
-    console.log(`Listening on port 5000...`)
-})
+    console.log(`Listening on port ${PORT}...`);
+});
 
